@@ -1,0 +1,185 @@
+@font-face {
+  font-family: inter;
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(3rem, 5vw);
+  background-color: var(--off-white);
+  font-family: inter, sans-serif, Arial;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  padding: min(3rem, 6vw) min(2rem, 4vw);
+}
+p {
+  line-height: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(70rem, 100%);
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+
+      li a {
+        text-decoration: none;
+        padding: min(0.5rem, 1vw) min(1.1rem, 2.2vw);
+        color: var(--dark-grayish-blue);
+      }
+      li a:focus,
+      li a:hover {
+        color: var(--soft-red);
+      }
+    }
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "main-content main-content aside-news"
+    "other-content other-content other-content";
+  width: min(70rem, 100%);
+  gap: min(4rem, 8vw) min(2rem, 4vw);
+
+  .main-content-container {
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "image image" "heading content";
+    gap: min(2rem, 4vw);
+    img {
+      grid-area: image;
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      grid-area: heading;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: clamp(2rem, 5vw, 3.5rem);
+      color: var(--very-dark-blue);
+    }
+    div {
+      grid-area: content;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: min(1.5rem, 3vw);
+      align-items: flex-start;
+      p {
+        color: var(--dark-grayish-blue);
+      }
+      a {
+        text-decoration: none;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 0.2rem;
+        color: var(--very-dark-blue);
+        background-color: var(--soft-red);
+        padding: min(1rem, 2vw) min(2rem, 4vw);
+      }
+      a:focus,
+      a:hover {
+        background-color: var(--very-dark-blue);
+        color: var(--off-white);
+      }
+    }
+  }
+  .aside-news-container {
+    grid-area: aside-news;
+    padding: min(2rem, 4vw) min(1.4rem, 2.8vw);
+    background-color: var(--very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: min(1rem, 2vw);
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--soft-orange);
+    }
+    article {
+      h3 {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 700;
+        color: var(--off-white);
+        margin-bottom: min(0.5rem, 1vw);
+        cursor: pointer;
+      }
+      h3:hover {
+        color: var(--soft-orange);
+      }
+      p {
+        color: hsl(233, 8%, 69%);
+      }
+    }
+    hr {
+      border-color: var(--dark-grayish-blue);
+    }
+  }
+  .other-content-container {
+    grid-area: other-content;
+    display: flex;
+    gap: min(2rem, 4vw);
+    justify-content: space-between;
+
+    article {
+      width: calc(100% / 3);
+      display: flex;
+      gap: min(1.4rem, 3vw);
+
+      img {
+        width: 30%;
+        height: auto;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+          font-size: clamp(1.2rem, 4vw, 2rem);
+          font-weight: 700;
+          color: var(--soft-red);
+        }
+        h3 {
+          font-size: clamp(1rem, 2vw, 1.13rem);
+          font-weight: 800;
+          color: var(--very-dark-blue);
+          cursor: pointer;
+        }
+        h3:hover {
+          color: var(--soft-red);
+        }
+        p {
+          color: var(--dark-grayish-blue);
+        }
+      }
+    }
+  }
+}

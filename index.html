@@ -14,6 +14,7 @@
     />
 
     <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -36,7 +37,7 @@
     </header>
     <main>
       <section
-        aria-labeledby="bright-future-heading"
+        aria-labelledby="bright-future-heading"
         class="main-content-container"
       >
         <img
@@ -47,23 +48,25 @@
         />
         <h1 id="bright-future-heading">The Bright Future of Web 3.0?</h1>
         <div>
-          <p>
+          <p id="descriptive-content">
             We dive into the next evolution of the web that claims to put the
             power of the platforms back into the hands of the people. But is it
             really fulfilling its promise?
           </p>
-          <a href="/">READ MORE</a>
+          <a href="/" aria-label="read more about the future of web 3.0"
+            >READ MORE</a
+          >
         </div>
       </section>
 
-      <aside aria-labeledby="other-news" class="aside-news-container">
+      <aside aria-labelledby="other-news" class="aside-news-container">
         <h2 id="other-news">New</h2>
-        <article aria-labeledby="hydrogen-news">
+        <article aria-labelledby="hydrogen-news">
           <h3 id="hydrogen-news">Hydrogen VS Electric Cars</h3>
           <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </article>
         <hr />
-        <article aria-labeledby="ai-news">
+        <article aria-labelledby="ai-news">
           <h3 id="ai-news">The Downsides of AI Artistry</h3>
           <p>
             What are the possible adverse effects of on-demand AI image
@@ -71,7 +74,7 @@
           </p>
         </article>
         <hr />
-        <article aria-labeledby="vc-news">
+        <article aria-labelledby="vc-news">
           <h3 id="vc-news">Is VC Funding Drying Up?</h3>
           <p>
             Private funding by VC firms is down 50% YOY. We take a look at what
@@ -84,7 +87,7 @@
         aria-label="Other content you may want to know."
         class="other-content-container"
       >
-        <article aria-labeledby="retro-pcs">
+        <article aria-labelledby="retro-pcs">
           <img
             src="/assets/images/image-retro-pcs.jpg"
             alt="Old PC"
@@ -97,7 +100,7 @@
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </article>
-        <article aria-labeledby="top-laptops">
+        <article aria-labelledby="top-laptops">
           <img
             src="/assets/images/image-top-laptops.jpg"
             alt="Keyboard of a laptop"
@@ -110,7 +113,7 @@
             <p>Our best picks for various needs and budgets.</p>
           </div>
         </article>
-        <article aria-labeledby="gaming-growth">
+        <article aria-labelledby="gaming-growth">
           <img
             src="/assets/images/image-gaming-growth.jpg"
             alt="Gaming joystick"
