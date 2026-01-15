@@ -124,14 +124,19 @@ main {
       color: var(--soft-orange);
     }
     article {
-      h3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
         font-size: clamp(1rem, 2.5vw, 1.25rem);
         font-weight: 700;
         color: var(--off-white);
-        margin-bottom: min(0.5rem, 1vw);
+        padding: min(0.5rem, 1vw) 0;
         cursor: pointer;
       }
-      h3:hover {
+      a:hover,
+      a:focus {
         color: var(--soft-orange);
       }
       p {
@@ -167,13 +172,15 @@ main {
           font-weight: 700;
           color: var(--soft-red);
         }
-        h3 {
+        a {
+          text-decoration: none;
           font-size: clamp(1rem, 2vw, 1.13rem);
           font-weight: 800;
+          padding: min(0.2rem, 0.4vw) 0;
           color: var(--very-dark-blue);
-          cursor: pointer;
         }
-        h3:hover {
+        a:hover,
+        a:focus {
           color: var(--soft-red);
         }
         p {
